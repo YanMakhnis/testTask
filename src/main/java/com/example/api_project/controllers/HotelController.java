@@ -21,6 +21,7 @@ public class HotelController {
         return hotelRepository.findAll();
     }
 
+    //TODO check the possibility to use dto and populate separately
     @GetMapping("/{id}")
     public ResponseEntity<Hotel> getHotelById(@PathVariable Long id) {
         return hotelRepository.findById(id)

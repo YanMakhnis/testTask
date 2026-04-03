@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.20.xsd">
+
+    <changeSet id="003" author="yanmakhnis">
+        <comment>Insert hotels</comment>
+
+        <!-- Hotel 1 -->
+        <insert tableName="hotels">
+            <column name="id" valueNumeric="1"/>
+            <column name="name" value="DoubleTree by Hilton Minsk"/>
+            <column name="description" value="The DoubleTree by Hilton Hotel Minsk offers 193 luxurious rooms in the Belorussian capital"/>
+            <column name="brand" value="Hilton"/>
+            <column name="house_number" value="9"/>
+            <column name="street" value="Pobediteley Avenue"/>
+            <column name="city" value="Minsk"/>
+            <column name="country" value="Belarus"/>
+            <column name="post_code" value="220004"/>
+            <column name="phone" value="+375 17 309-80-00"/>
+            <column name="email" value="doubletreeminsk.info@hilton.com"/>
+            <column name="check_in" value="14:00"/>
+            <column name="check_out" value="12:00"/>
+        </insert>
+
+        <!-- Hotel 2 -->
+        <insert tableName="hotels">
+            <column name="id" valueNumeric="2"/>
+            <column name="name" value="Hotel Victoria Minsk"/>
+            <column name="description" value="Hotel Victoria is located in the historical center of Minsk"/>
+            <column name="brand" value="Victoria"/>
+            <column name="house_number" value="14"/>
+            <column name="street" value="Internatsionalnaya Street"/>
+            <column name="city" value="Minsk"/>
+            <column name="country" value="Belarus"/>
+            <column name="post_code" value="220030"/>
+            <column name="phone" value="+375 17 219-80-00"/>
+            <column name="email" value="info@victoria.by"/>
+            <column name="check_in" value="14:00"/>
+            <column name="check_out" value="12:00"/>
+        </insert>
+
+        <!-- Amenities for hotel 1 -->
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="1"/>
+            <column name="amenity" value="Free parking"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="1"/>
+            <column name="amenity" value="Free WiFi"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="1"/>
+            <column name="amenity" value="Pool"/>
+        </insert>
+
+        <!-- Amenities for hotel 1 -->
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="2"/>
+            <column name="amenity" value="Free WiFi"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="2"/>
+            <column name="amenity" value="Spa"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="2"/>
+            <column name="amenity" value="Restaurant"/>
+        </insert>
+
+        <rollback>
+            <delete tableName="hotel_amenities"/>
+            <delete tableName="hotels"/>
+        </rollback>
+    </changeSet>
+
+</databaseChangeLog>
