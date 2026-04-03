@@ -15,6 +15,7 @@ public class HotelController {
     @Resource
     private HotelRepository hotelRepository;
 
+    //TODO mapping
     @GetMapping
     public List<Hotel> getAllHotels() {
         return hotelRepository.findAll();
