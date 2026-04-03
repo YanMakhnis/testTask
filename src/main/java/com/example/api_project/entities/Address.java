@@ -4,7 +4,7 @@ import jakarta.persistence.Embeddable;
 
 @Embeddable
 public class Address {
-    private String houseNumber;
+    private String houseNumber; // TODO check Type
     private String street;
     private String city;
     private String country;
