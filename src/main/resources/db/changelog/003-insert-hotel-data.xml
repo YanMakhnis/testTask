@@ -8,11 +8,12 @@
     <changeSet id="003" author="yanmakhnis">
         <comment>Insert hotels</comment>
 
-        <!-- Hotel 1 -->
+        <!--        Hotel 1 - Minsk, Belarus-->
         <insert tableName="hotels">
             <column name="id" valueNumeric="1"/>
             <column name="name" value="DoubleTree by Hilton Minsk"/>
-            <column name="description" value="The DoubleTree by Hilton Hotel Minsk offers 193 luxurious rooms in the Belorussian capital"/>
+            <column name="description"
+                    value="The DoubleTree by Hilton Hotel Minsk offers 193 luxurious rooms in the Belorussian capital and stunning views of Minsk city from the hotel's 20th floor ..."/>
             <column name="brand" value="Hilton"/>
             <column name="house_number" value="9"/>
             <column name="street" value="Pobediteley Avenue"/>
@@ -25,11 +26,194 @@
             <column name="check_out" value="12:00"/>
         </insert>
 
-        <!-- Hotel 2 -->
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="1"/>
+            <column name="amenity" value="Free parking"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="1"/>
+            <column name="amenity" value="Free WiFi"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="1"/>
+            <column name="amenity" value="Non-smoking rooms"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="1"/>
+            <column name="amenity" value="Concierge"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="1"/>
+            <column name="amenity" value="On-site restaurant"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="1"/>
+            <column name="amenity" value="Fitness center"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="1"/>
+            <column name="amenity" value="Pet-friendly rooms"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="1"/>
+            <column name="amenity" value="Room service"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="1"/>
+            <column name="amenity" value="Business center"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="1"/>
+            <column name="amenity" value="Meeting rooms"/>
+        </insert>
+
+        <!--        Hotel 2 - Kiev, Ukraine-->
         <insert tableName="hotels">
             <column name="id" valueNumeric="2"/>
+            <column name="name" value="Fairmont Grand Hotel Kyiv"/>
+            <column name="description"
+                    value="Located on the banks of the Dnieper River, this luxury hotel offers panoramic views of Kyiv. Features a spa, indoor pool and several restaurants."/>
+            <column name="brand" value="Fairmont"/>
+            <column name="house_number" value="1"/>
+            <column name="street" value="Naberezhno-Khreshchatytska Street"/>
+            <column name="city" value="Kyiv"/>
+            <column name="country" value="Ukraine"/>
+            <column name="post_code" value="04070"/>
+            <column name="phone" value="+380 44 322-88-88"/>
+            <column name="email" value="kyiv@fairmont.com"/>
+            <column name="check_in" value="15:00"/>
+            <column name="check_out" value="12:00"/>
+        </insert>
+
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="2"/>
+            <column name="amenity" value="Free WiFi"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="2"/>
+            <column name="amenity" value="Indoor pool"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="2"/>
+            <column name="amenity" value="Spa"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="2"/>
+            <column name="amenity" value="Fitness center"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="2"/>
+            <column name="amenity" value="Restaurant"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="2"/>
+            <column name="amenity" value="Parking"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="2"/>
+            <column name="amenity" value="Concierge"/>
+        </insert>
+
+        <!--        Hotel 3 - New York, USA-->
+        <insert tableName="hotels">
+            <column name="id" valueNumeric="3"/>
+            <column name="name" value="The Plaza Hotel"/>
+            <column name="description"
+                    value="Iconic hotel overlooking Central Park. Features luxurious rooms, a Champagne bar and a world-famous afternoon tea service."/>
+            <column name="brand" value="Fairmont"/>
+            <column name="house_number" value="768"/>
+            <column name="street" value="5th Avenue"/>
+            <column name="city" value="New York"/>
+            <column name="country" value="USA"/>
+            <column name="post_code" value="10019"/>
+            <column name="phone" value="+1 212 759-30-00"/>
+            <column name="email" value="reservations@theplaza.com"/>
+            <column name="check_in" value="16:00"/>
+            <column name="check_out" value="11:00"/>
+        </insert>
+
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="3"/>
+            <column name="amenity" value="Free WiFi"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="3"/>
+            <column name="amenity" value="Fitness center"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="3"/>
+            <column name="amenity" value="Restaurant"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="3"/>
+            <column name="amenity" value="Champagne bar"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="3"/>
+            <column name="amenity" value="Concierge"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="3"/>
+            <column name="amenity" value="Business center"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="3"/>
+            <column name="amenity" value="Room service"/>
+        </insert>
+
+        <!--        Hotel 4 - Moscow, Russia-->
+        <insert tableName="hotels">
+            <column name="id" valueNumeric="4"/>
+            <column name="name" value="Lotte Hotel Moscow"/>
+            <column name="description"
+                    value="Lotte Hotel Moscow is a 5-star luxury hotel located in the business center of Moscow. Features a modern spa, indoor pool and several dining options."/>
+            <column name="brand" value="Lotte"/>
+            <column name="house_number" value="8"/>
+            <column name="street" value="Novinsky Boulevard"/>
+            <column name="city" value="Moscow"/>
+            <column name="country" value="Russia"/>
+            <column name="post_code" value="121099"/>
+            <column name="phone" value="+7 495 745-10-00"/>
+            <column name="email" value="info@lottehotel.ru"/>
+            <column name="check_in" value="15:00"/>
+            <column name="check_out" value="12:00"/>
+        </insert>
+
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="4"/>
+            <column name="amenity" value="Free WiFi"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="4"/>
+            <column name="amenity" value="Indoor pool"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="4"/>
+            <column name="amenity" value="Spa"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="4"/>
+            <column name="amenity" value="Fitness center"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="4"/>
+            <column name="amenity" value="Restaurant"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="4"/>
+            <column name="amenity" value="Free parking"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="4"/>
+            <column name="amenity" value="Concierge"/>
+        </insert>
+
+        <!--        Hotel 5 - Minsk, Belarus-->
+        <insert tableName="hotels">
+            <column name="id" valueNumeric="5"/>
             <column name="name" value="Hotel Victoria Minsk"/>
-            <column name="description" value="Hotel Victoria is located in the historical center of Minsk"/>
+            <column name="description"
+                    value="Hotel Victoria is located in the historical center of Minsk on the banks of the Svisloch River. Offers elegant rooms with free Wi-Fi and a spa center."/>
             <column name="brand" value="Victoria"/>
             <column name="house_number" value="14"/>
             <column name="street" value="Internatsionalnaya Street"/>
@@ -42,32 +226,362 @@
             <column name="check_out" value="12:00"/>
         </insert>
 
-        <!-- Amenities for hotel 1 -->
         <insert tableName="hotel_amenities">
-            <column name="hotel_id" valueNumeric="1"/>
-            <column name="amenity" value="Free parking"/>
-        </insert>
-        <insert tableName="hotel_amenities">
-            <column name="hotel_id" valueNumeric="1"/>
+            <column name="hotel_id" valueNumeric="5"/>
             <column name="amenity" value="Free WiFi"/>
         </insert>
         <insert tableName="hotel_amenities">
-            <column name="hotel_id" valueNumeric="1"/>
-            <column name="amenity" value="Pool"/>
+            <column name="hotel_id" valueNumeric="5"/>
+            <column name="amenity" value="Spa center"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="5"/>
+            <column name="amenity" value="Sauna"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="5"/>
+            <column name="amenity" value="Restaurant"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="5"/>
+            <column name="amenity" value="Bar"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="5"/>
+            <column name="amenity" value="Conference hall"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="5"/>
+            <column name="amenity" value="Parking"/>
         </insert>
 
-        <!-- Amenities for hotel 1 -->
+        <!--        Hotel 6 - Kiev, Ukraine-->
+        <insert tableName="hotels">
+            <column name="id" valueNumeric="6"/>
+            <column name="name" value="InterContinental Kyiv"/>
+            <column name="description"
+                    value="Located in the heart of Kyiv, this hotel offers elegant rooms with city views. The famous Khreshchatyk Street is just a 5-minute walk away."/>
+            <column name="brand" value="InterContinental"/>
+            <column name="house_number" value="2A"/>
+            <column name="street" value="Velyka Zhytomyrska Street"/>
+            <column name="city" value="Kyiv"/>
+            <column name="country" value="Ukraine"/>
+            <column name="post_code" value="01601"/>
+            <column name="phone" value="+380 44 393-70-00"/>
+            <column name="email" value="info@intercontinental.ua"/>
+            <column name="check_in" value="14:00"/>
+            <column name="check_out" value="12:00"/>
+        </insert>
+
         <insert tableName="hotel_amenities">
-            <column name="hotel_id" valueNumeric="2"/>
+            <column name="hotel_id" valueNumeric="6"/>
             <column name="amenity" value="Free WiFi"/>
         </insert>
         <insert tableName="hotel_amenities">
-            <column name="hotel_id" valueNumeric="2"/>
+            <column name="hotel_id" valueNumeric="6"/>
+            <column name="amenity" value="Fitness center"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="6"/>
+            <column name="amenity" value="Restaurant"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="6"/>
+            <column name="amenity" value="Business center"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="6"/>
+            <column name="amenity" value="Room service"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="6"/>
+            <column name="amenity" value="Parking"/>
+        </insert>
+
+        <!--        Hotel 7 - London, Great Britain-->
+        <insert tableName="hotels">
+            <column name="id" valueNumeric="7"/>
+            <column name="name" value="The Ritz London"/>
+            <column name="description"
+                    value="Iconic 5-star hotel overlooking Green Park. Features luxurious rooms, Michelin-starred dining and a legendary afternoon tea service."/>
+            <column name="brand" value="Ritz"/>
+            <column name="house_number" value="150"/>
+            <column name="street" value="Piccadilly"/>
+            <column name="city" value="London"/>
+            <column name="country" value="United Kingdom"/>
+            <column name="post_code" value="W1J 9BR"/>
+            <column name="phone" value="+44 20 7493-81-81"/>
+            <column name="email" value="enquiries@theritzlondon.com"/>
+            <column name="check_in" value="15:00"/>
+            <column name="check_out" value="12:00"/>
+        </insert>
+
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="7"/>
+            <column name="amenity" value="Free WiFi"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="7"/>
+            <column name="amenity" value="Michelin-starred restaurant"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="7"/>
+            <column name="amenity" value="Afternoon tea"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="7"/>
+            <column name="amenity" value="Fitness center"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="7"/>
+            <column name="amenity" value="Concierge"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="7"/>
+            <column name="amenity" value="Room service"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="7"/>
+            <column name="amenity" value="Business center"/>
+        </insert>
+
+        <!--        Hotel 8 - Paris, France-->
+        <insert tableName="hotels">
+            <column name="id" valueNumeric="8"/>
+            <column name="name" value="Four Seasons Hotel George V"/>
+            <column name="description"
+                    value="A landmark Art Deco hotel just steps from the Champs-Élysées. Features 244 elegant rooms, a three-Michelin-starred restaurant and a stunning spa."/>
+            <column name="brand" value="Four Seasons"/>
+            <column name="house_number" value="31"/>
+            <column name="street" value="Avenue George V"/>
+            <column name="city" value="Paris"/>
+            <column name="country" value="France"/>
+            <column name="post_code" value="75008"/>
+            <column name="phone" value="+33 1 49-52-70-00"/>
+            <column name="email" value="reservations@fourseasons.com"/>
+            <column name="check_in" value="15:00"/>
+            <column name="check_out" value="12:00"/>
+        </insert>
+
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="8"/>
+            <column name="amenity" value="Free WiFi"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="8"/>
+            <column name="amenity" value="Michelin-starred restaurant"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="8"/>
             <column name="amenity" value="Spa"/>
         </insert>
         <insert tableName="hotel_amenities">
-            <column name="hotel_id" valueNumeric="2"/>
+            <column name="hotel_id" valueNumeric="8"/>
+            <column name="amenity" value="Indoor pool"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="8"/>
+            <column name="amenity" value="Fitness center"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="8"/>
+            <column name="amenity" value="Concierge"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="8"/>
+            <column name="amenity" value="Room service"/>
+        </insert>
+
+        <!--        Hotel 9 - Berlin, Germany-->
+        <insert tableName="hotels">
+            <column name="id" valueNumeric="9"/>
+            <column name="name" value="Hotel Adlon Kempinski"/>
+            <column name="description"
+                    value="Iconic luxury hotel located opposite the Brandenburg Gate. Features elegant rooms, a spa and several fine dining restaurants."/>
+            <column name="brand" value="Kempinski"/>
+            <column name="house_number" value="1"/>
+            <column name="street" value="Unter den Linden"/>
+            <column name="city" value="Berlin"/>
+            <column name="country" value="Germany"/>
+            <column name="post_code" value="10117"/>
+            <column name="phone" value="+49 30 2261-0"/>
+            <column name="email" value="info@adlon.de"/>
+            <column name="check_in" value="15:00"/>
+            <column name="check_out" value="12:00"/>
+        </insert>
+
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="9"/>
+            <column name="amenity" value="Free WiFi"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="9"/>
+            <column name="amenity" value="Spa"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="9"/>
+            <column name="amenity" value="Fitness center"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="9"/>
             <column name="amenity" value="Restaurant"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="9"/>
+            <column name="amenity" value="Bar"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="9"/>
+            <column name="amenity" value="Concierge"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="9"/>
+            <column name="amenity" value="Parking"/>
+        </insert>
+
+        <!--        Hotel 10 - Moscow, Russia-->
+        <insert tableName="hotels">
+            <column name="id" valueNumeric="10"/>
+            <column name="name" value="Four Seasons Hotel Moscow"/>
+            <column name="description"
+                    value="Overlooking Manege Square and the Kremlin, this luxury hotel offers an indoor pool, a spa and 24-hour concierge service. Red Square is a 5-minute walk away."/>
+            <column name="brand" value="Four Seasons"/>
+            <column name="house_number" value="2"/>
+            <column name="street" value="Okhotny Ryad Street"/>
+            <column name="city" value="Moscow"/>
+            <column name="country" value="Russia"/>
+            <column name="post_code" value="109012"/>
+            <column name="phone" value="+7 499 277-71-00"/>
+            <column name="email" value="info@fourseasons.com"/>
+            <column name="check_in" value="15:00"/>
+            <column name="check_out" value="12:00"/>
+        </insert>
+
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="10"/>
+            <column name="amenity" value="Free WiFi"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="10"/>
+            <column name="amenity" value="Indoor pool"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="10"/>
+            <column name="amenity" value="Spa"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="10"/>
+            <column name="amenity" value="Fitness center"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="10"/>
+            <column name="amenity" value="Restaurant"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="10"/>
+            <column name="amenity" value="Concierge"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="10"/>
+            <column name="amenity" value="Room service"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="10"/>
+            <column name="amenity" value="Business center"/>
+        </insert>
+
+        <!--        Hotel 11 - Dubai, UAE-->
+        <insert tableName="hotels">
+            <column name="id" valueNumeric="11"/>
+            <column name="name" value="Burj Al Arab Jumeirah"/>
+            <column name="description"
+                    value="The world's most luxurious hotel, shaped like a sail. Features lavish suites, a helipad and underwater restaurants."/>
+            <column name="brand" value="Jumeirah"/>
+            <column name="house_number" value="3"/>
+            <column name="street" value="Jumeirah Beach Road"/>
+            <column name="city" value="Dubai"/>
+            <column name="country" value="UAE"/>
+            <column name="post_code" value="74147"/>
+            <column name="phone" value="+971 4 301-77-77"/>
+            <column name="email" value="burjalarab@jumeirah.com"/>
+            <column name="check_in" value="16:00"/>
+            <column name="check_out" value="12:00"/>
+        </insert>
+
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="11"/>
+            <column name="amenity" value="Free WiFi"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="11"/>
+            <column name="amenity" value="Infinity pool"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="11"/>
+            <column name="amenity" value="Spa"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="11"/>
+            <column name="amenity" value="Underwater restaurant"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="11"/>
+            <column name="amenity" value="Helipad"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="11"/>
+            <column name="amenity" value="Butler service"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="11"/>
+            <column name="amenity" value="Private beach"/>
+        </insert>
+
+        <!--        Hotel 12 - Bangkok, Thailand-->
+        <insert tableName="hotels">
+            <column name="id" valueNumeric="12"/>
+            <column name="name" value="Mandarin Oriental Bangkok"/>
+            <column name="description"
+                    value="The original Mandarin Oriental hotel, located on the banks of the Chao Phraya River. Features 331 elegant rooms, award-winning restaurants and a world-famous spa."/>
+            <column name="brand" value="Mandarin Oriental"/>
+            <column name="house_number" value="48"/>
+            <column name="street" value="Oriental Avenue"/>
+            <column name="city" value="Bangkok"/>
+            <column name="country" value="Thailand"/>
+            <column name="post_code" value="10500"/>
+            <column name="phone" value="+66 2 659-90-00"/>
+            <column name="email" value="mobkk-enquiry@mohg.com"/>
+            <column name="check_in" value="14:00"/>
+            <column name="check_out" value="12:00"/>
+        </insert>
+
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="12"/>
+            <column name="amenity" value="Free WiFi"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="12"/>
+            <column name="amenity" value="Spa"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="12"/>
+            <column name="amenity" value="Outdoor pool"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="12"/>
+            <column name="amenity" value="Fitness center"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="12"/>
+            <column name="amenity" value="Restaurant"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="12"/>
+            <column name="amenity" value="Concierge"/>
+        </insert>
+        <insert tableName="hotel_amenities">
+            <column name="hotel_id" valueNumeric="12"/>
+            <column name="amenity" value="Butler service"/>
         </insert>
 
         <rollback>
@@ -75,5 +589,4 @@
             <delete tableName="hotels"/>
         </rollback>
     </changeSet>
-
 </databaseChangeLog>

@@ -7,6 +7,9 @@
 
     <include file="001-create-hotel-table.xml" relativeToChangelogFile="true"/>
     <include file="002-create-amenities-table.xml" relativeToChangelogFile="true"/>
+    <!--    creating hotel data with predefined ids for test purposes-->
     <include file="003-insert-hotel-data.xml" relativeToChangelogFile="true"/>
+    <!--    reseting the sequence to make possible adding new hotels via post api-->
+    <include file="004-reset-sequence.xml" relativeToChangelogFile="true"/>
 
 </databaseChangeLog>

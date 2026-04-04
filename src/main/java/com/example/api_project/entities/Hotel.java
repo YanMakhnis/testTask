@@ -1,8 +1,5 @@
 package com.example.api_project.entities;
 
-import com.example.api_project.entities.Address;
-import com.example.api_project.entities.ArrivalTime;
-import com.example.api_project.entities.Contacts;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;

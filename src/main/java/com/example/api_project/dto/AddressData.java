@@ -1,24 +1,13 @@
-package com.example.api_project.entities;
+package com.example.api_project.dto;
 
-import jakarta.persistence.Embeddable;
-
-@Embeddable
-public class Address {
+public class AddressData {
     private String houseNumber;
     private String street;
     private String city;
     private String country;
     private String postCode;
 
-    public Address() {
-    }
-
-    public Address(String houseNumber, String street, String city, String country, String postCode) {
-        this.houseNumber = houseNumber;
-        this.street = street;
-        this.city = city;
-        this.country = country;
-        this.postCode = postCode;
+    public AddressData() {
     }
 
     public String getHouseNumber() {
