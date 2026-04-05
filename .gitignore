@@ -11,7 +11,7 @@ out/
 .vscode/
 logs/
 *.log
-application.properties
+#application.properties - made for testing purposes only! Do not do on prod.
 application-*.properties
 application.yml
 application-*.yml
