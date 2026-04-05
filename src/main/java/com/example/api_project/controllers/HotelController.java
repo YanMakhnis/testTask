@@ -4,6 +4,10 @@ import com.example.api_project.dto.createRequestDto.HotelCreateData;
 import com.example.api_project.dto.HotelDetailedData;
 import com.example.api_project.dto.HotelShortData;
 import com.example.api_project.services.HotelService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.annotation.Resource;
 import jakarta.validation.Valid;
 import org.apache.commons.collections4.CollectionUtils;
@@ -19,6 +23,7 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/property-view")
+@Tag(name = "Hotels", description = "API for managing hotels")
 public class HotelController {
     @Resource
     private HotelService hotelService;
@@ -29,6 +34,8 @@ public class HotelController {
      * @return list of {@link HotelShortData} containing hotel
      */
     @GetMapping("/hotels")
+    @Operation(summary = "Get all hotels", description = "Returns list of all hotels with short information")
+    @ApiResponse(responseCode = "200", description = "Successfully retrieved list")
     public List<HotelShortData> getAllHotels() {
         return hotelService.getAllHotels();
     }
@@ -40,6 +47,11 @@ public class HotelController {
      * @return hotel details {@link HotelDetailedData} with 200 OK, otherwise 404 Not Found if hotel doesn't exist
      */
     @GetMapping("/hotels/{id}")
+    @Operation(summary = "Get hotel by ID", description = "Returns detailed information about a specific hotel")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Hotel found"),
+            @ApiResponse(responseCode = "404", description = "Hotel not found")
+    })
     public ResponseEntity<HotelDetailedData> getHotelById(@PathVariable Long id) {
         HotelDetailedData hotel = hotelService.getHotelById(id);
         return hotel != null ? ResponseEntity.ok(hotel) : ResponseEntity.notFound().build();
@@ -57,6 +69,7 @@ public class HotelController {
      * @return list of hotels list of {@link HotelShortData} if matching found
      */
     @GetMapping("/search")
+    @Operation(summary = "Search hotels", description = "Search hotels by name, brand, city, country or amenities")
     public ResponseEntity<List<HotelShortData>> searchHotels(
             @RequestParam(required = false) String name,
             @RequestParam(required = false) String brand,
@@ -76,6 +89,7 @@ public class HotelController {
      * @return created hotel {@link HotelShortData} with generated ID and HTTP 201 Created status
      */
     @PostMapping("/hotels")
+    @Operation(summary = "Create a new hotel", description = "Creates a hotel with the provided data")
     public ResponseEntity<HotelShortData> createHotel(@Valid @RequestBody final HotelCreateData hotelCreateData) {
         final HotelShortData createdHotel = hotelService.createHotel(hotelCreateData);
         return ResponseEntity.status(HttpStatus.CREATED).body(createdHotel);
@@ -90,6 +104,11 @@ public class HotelController {
      * @return HTTP 204 No Content on success, otherwise HTTP 404 Not Found if hotel doesn't exist
      */
     @PostMapping("/hotels/{id}/amenities")
+    @Operation(summary = "Add amenities to hotel", description = "Adds amenities to an existing hotel.")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "204", description = "Amenities added successfully"),
+            @ApiResponse(responseCode = "404", description = "Hotel not found")
+    })
     public ResponseEntity<HotelDetailedData> addAmenities(
             @PathVariable final Long id,
             @RequestBody final List<String> amenities) {
@@ -105,6 +124,11 @@ public class HotelController {
      * @throws IllegalArgumentException if param is not one of allowed values
      */
     @GetMapping("/histogram/{param}")
+    @Operation(summary = "Get hotel statistics as per param", description = "Returns histogram grouped by brand, city, country, or amenities")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Statistics retrieved successfully"),
+            @ApiResponse(responseCode = "400", description = "Invalid parameter. Allowed: brand, city, country, amenities")
+    })
     public ResponseEntity<Map<String, Long>> getHistogram(@PathVariable final String param) {
         Map<String, Long> histogram = hotelService.getHistogram(param);
         return ResponseEntity.ok(histogram);
