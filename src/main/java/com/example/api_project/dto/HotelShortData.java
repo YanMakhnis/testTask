@@ -1,5 +1,8 @@
 package com.example.api_project.dto;
 
+/**
+ * Short hotel information for list and search responses.
+ */
 public class HotelShortData {
     private Long id;
     private String name;

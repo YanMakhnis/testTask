@@ -1,10 +1,10 @@
 package com.example.api_project.dto;
 
-import com.example.api_project.entities.Address;
-import com.example.api_project.entities.ArrivalTime;
-
 import java.util.List;
 
+/**
+ * Detailed hotel information for list and search responses.
+ */
 public class HotelDetailedData {
     private Long id;
     private String name;

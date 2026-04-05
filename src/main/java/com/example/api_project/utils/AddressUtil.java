@@ -2,10 +2,22 @@ package com.example.api_project.utils;
 
 import com.example.api_project.entities.Address;
 
+/**
+ * Utility class for address formatting.
+ */
 public class AddressUtil {
     private static final String SPACE = " ";
     private static final String COMMA_SPACE = ", ";
 
+    private AddressUtil() {
+    }
+
+    /**
+     * Formats Address entity to readable string.
+     *
+     * @param address Address object to format
+     * @return formatted address string, or null if address is null
+     */
     public static String resolveAddress(Address address) {
         if (address == null) {
             return null;
@@ -29,4 +41,5 @@ public class AddressUtil {
         }
 
         return sb.toString();
-    }}
+    }
+}

@@ -25,6 +25,9 @@ import java.util.stream.Collectors;
 
 import static com.example.api_project.specifications.HotelSpecifications.*;
 
+/**
+ * Default implementation of {@link HotelService}.
+ */
 @Service
 public class DefaultHotelService implements HotelService {
     @Resource

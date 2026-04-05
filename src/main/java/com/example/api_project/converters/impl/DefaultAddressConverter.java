@@ -6,6 +6,9 @@ import com.example.api_project.dto.AddressData;
 import com.example.api_project.entities.Address;
 import org.springframework.stereotype.Component;
 
+/**
+ * Default implementation of {@link AddressConverter}.
+ */
 @Component
 public class DefaultAddressConverter implements AddressConverter {
     @Override

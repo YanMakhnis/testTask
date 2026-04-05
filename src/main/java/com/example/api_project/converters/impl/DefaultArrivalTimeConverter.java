@@ -6,6 +6,9 @@ import com.example.api_project.dto.ArrivalTimeData;
 import com.example.api_project.entities.ArrivalTime;
 import org.springframework.stereotype.Component;
 
+/**
+ * Default implementation of {@link ArrivalTimeConverter}.
+ */
 @Component
 public class DefaultArrivalTimeConverter implements ArrivalTimeConverter {
     @Override

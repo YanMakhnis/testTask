@@ -1,5 +1,8 @@
 package com.example.api_project.dto;
 
+/**
+ * Arrival time information DTO.
+ */
 public class ArrivalTimeData {
     private String checkIn;
     private String checkOut;

@@ -1,5 +1,8 @@
 package com.example.api_project.dto;
 
+/**
+ * Contact information DTO.
+ */
 public class ContactData {
     private String phone;
     private String email;

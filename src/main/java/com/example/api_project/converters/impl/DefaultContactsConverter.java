@@ -6,6 +6,9 @@ import com.example.api_project.dto.ContactData;
 import com.example.api_project.entities.Contacts;
 import org.springframework.stereotype.Component;
 
+/**
+ * Default implementation of {@link ContactsConverter}.
+ */
 @Component
 public class DefaultContactsConverter implements ContactsConverter {
     @Override

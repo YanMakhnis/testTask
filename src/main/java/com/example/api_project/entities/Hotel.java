@@ -6,6 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * Represents a hotel entity in the database.
+ */
 @Entity
 @Table(name = "hotels")
 public class Hotel {

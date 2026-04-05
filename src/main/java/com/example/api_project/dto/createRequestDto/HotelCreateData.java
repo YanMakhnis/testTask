@@ -6,6 +6,11 @@ import jakarta.validation.constraints.NotNull;
 
 import java.util.List;
 
+/**
+ * Request DTO for hotel creation (POST /hotels).
+ * Required: name, brand, address, contacts.
+ * Optional: description, arrivalTime, amenities.
+ */
 public class HotelCreateData {
     @NotBlank(message = "Name is required")
     private String name;

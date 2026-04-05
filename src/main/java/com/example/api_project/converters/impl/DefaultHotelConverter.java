@@ -14,6 +14,9 @@ import org.springframework.stereotype.Component;
 
 import java.util.Objects;
 
+/**
+ * Default implementation of {@link HotelConverter}.
+ */
 @Component
 public class DefaultHotelConverter implements HotelConverter {
 

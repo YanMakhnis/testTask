@@ -1,5 +1,8 @@
 package com.example.api_project.dto;
 
+/**
+ * Address time information DTO.
+ */
 public class AddressData {
     private String houseNumber;
     private String street;
